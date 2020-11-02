@@ -19,3 +19,10 @@ jobs:
       run: chmod +x gradlew
     - name: Test with Gradle
       run: ./gradlew test
+    - name: Code coverage report
+      run: ./gradlew jacocoTestReport
+    - name: Data to codecov
+      # This is quite obviously ridiculously unsafe but the course materials
+      # mandate this for some reason.
+      # Good thing it's not running on any of my boxes, sheesh.
+      run: bash <(curl -s https://codecov.io/bash)
