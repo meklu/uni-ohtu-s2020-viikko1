@@ -26,3 +26,5 @@ jobs:
       # mandate this for some reason.
       # Good thing it's not running on any of my boxes, sheesh.
       run: bash <(curl -s https://codecov.io/bash)
+    - name: Checkstyle
+      run: ./gradlew checkstyleMain
